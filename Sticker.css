@@ -1,0 +1,159 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Work Sans', sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: white;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#bodyblur {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#wallpaper {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -2;
+    animation: zoomIn 30s infinite;
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#beneranblur {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+#Content {
+    text-align: center;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#suratin {
+    margin-bottom: 20px;
+}
+
+#suratin img {
+    width: 150px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+#suratin img:hover {
+    transform: scale(1.1);
+}
+
+#ket {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+#halo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    margin-top: 0;
+    animation: slideIn 3s ease-out;
+}
+
+@keyframes slideIn {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(0); }
+}
+
+.kumpulanstiker {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.kumpulanstiker img {
+    width: 60px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.kumpulanstiker img:hover {
+    transform: scale(1.2);
+}
+
+#bq {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  border-left: 5px solid #e74c3c;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+}
+
+
+#kalimat, #kalimat2, #kalimatbawah, #kalimatbwh, #kalimatbawah2, #kalimatbawah3 {
+    margin: 10px 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.2em;
+}
+
+.fas.fa-heart {
+    position: absolute;
+    font-size: 20px;
+    color: #e74c3c;
+    animation: heart 5s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes heart {
+    0% {
+        transform: scale(0.5) translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1.2) translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.sembunyi {
+    display: none;
+}
